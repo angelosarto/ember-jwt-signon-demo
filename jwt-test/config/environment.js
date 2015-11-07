@@ -59,8 +59,8 @@ module.exports = function(environment) {
     refreshAccessTokens: true,
     serverTokenRefreshEndpoint: 'http://127.0.0.1:5000/refresh',
     tokenExpireName: 'exp',
-    refreshLeeway: 0,
-    timeFactor: 1  // example - set to "1000" to convert incoming seconds to milliseconds.
+    refreshLeeway: 5,
+    timeFactor: 1000  // example - set to "1000" to convert incoming seconds to milliseconds.
   };
 
   ENV.contentSecurityPolicy = {
