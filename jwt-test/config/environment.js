@@ -1,7 +1,6 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
-
   var ENV = {
     modulePrefix: 'jwt-test',
     environment: environment,
@@ -45,7 +44,10 @@ module.exports = function(environment) {
   }
 
   ENV['simple-auth'] = {
-    authorizer: 'simple-auth-authorizer:token'
+    authorizer: 'simple-auth-authorizer:token',
+    authenticationRoute: 'login',
+    routeAfterAuthentication: 'home',
+    routeIfAlreadyAuthenticated: 'index'
   };
 
   ENV['simple-auth-token'] = {
